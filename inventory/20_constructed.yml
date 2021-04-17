@@ -1,0 +1,4 @@
+plugin: constructed
+strict: False
+groups:
+  mgmt: "'mgmt_' in inventory_hostname"

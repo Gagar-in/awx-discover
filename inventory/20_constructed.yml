@@ -2,3 +2,4 @@ plugin: constructed
 strict: False
 groups:
   mgmt: "'mgmt_' in inventory_hostname"
+  comp: "'comp_' in inventory_hostname"

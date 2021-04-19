@@ -1,8 +1,0 @@
----
-- name: Gather facts
-  become: True
-  gather_facts: True
-  hosts: mgmt
-  tasks:
-    - debug:
-        msg: "Gathered {{ ansible_default_ipv4.address }}"

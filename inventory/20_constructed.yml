@@ -1,5 +1,6 @@
 plugin: constructed
 strict: False
 groups:
-  mgmt: "'mgmt_' in inventory_hostname"
-  comp: "'comp_' in inventory_hostname"
+  bmcs: "'bmc_' in inventory_hostname"
+  gagarin: "'bmc_' in inventory_hostname"
+  hosts: "'host_' in inventory_hostname"

@@ -2,5 +2,5 @@ plugin: constructed
 strict: False
 groups:
   bmcs: "'bmc_' in inventory_hostname"
-  gagarin: "'bmc_' in inventory_hostname"
   hosts: "'host_' in inventory_hostname"
+#  gagarin: "'bmc_' in inventory_hostname"

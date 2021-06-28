@@ -1,0 +1,6 @@
+plugin: gagarin_lldp
+sw_addr: 192.168.188.161
+cache: True
+cache_plugin: jsonfile
+cache_connection: /tmp/.facts
+cache_timeout: 3600

@@ -3,16 +3,20 @@
 * Enter AWX containter and make changes there so ansible can use nmap to discover hosts
 **yum -y install nmap**
 
+* Gagarin LLDP plugin
+put it to **/usr/share/ansible/plugins/inventory/gagarin_lldp.py**
+
 **vi /etc/ansible/ansible.cfg**
 ```
 [defaults]
 inventory      = inventory
+inventory_plugins  = /usr/share/ansible/plugins/inventory
 ...
 [inventory]
-enable_plugins = host_list, ini, yaml, constructed, nmap, script, auto
+enable_plugins = nmap, constructed, gagarin_lldp
 ```
 
-* Generage hostnames
+* Generate hostnames
 ```
 for i in {1..199}; do printf "192.168.123.%d\tmgmt%03d\n" $i $i >> /etc/hosts; done
 for i in {200..254}; do printf "192.168.123.%d\tcomp%03d\n" $i $i >> /etc/hosts; done

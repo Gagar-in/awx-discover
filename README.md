@@ -5,6 +5,7 @@
 
 * Gagarin LLDP plugin
 put it to **/usr/share/ansible/plugins/inventory/gagarin_lldp.py**
+and make sure respective user has access to the switch
 
 **vi /etc/ansible/ansible.cfg**
 ```
@@ -18,8 +19,8 @@ enable_plugins = nmap, constructed, gagarin_lldp
 
 * Generate hostnames
 ```
-for i in {1..199}; do printf "192.168.123.%d\tmgmt%03d\n" $i $i >> /etc/hosts; done
-for i in {200..254}; do printf "192.168.123.%d\tcomp%03d\n" $i $i >> /etc/hosts; done
+for i in {1..199}; do printf "192.168.80.%d\tbmc_%03d\n" $i $i >> /etc/hosts; done
+for i in {200..254}; do printf "192.168.123.%d\thost_%03d\n" $i $i >> /etc/hosts; done
 ```
 
 * In AWX create Inventory (Save), then go to Inventory Sources (Add), create "Sourced from Project" select inventory file as /(project root) and make sure to check "Update on project update" checkbox

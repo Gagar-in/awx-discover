@@ -1,0 +1,10 @@
+plugin: nmap
+address: 192.168.50.110/26
+strict: False
+ipv4: True
+ipv6: False
+ports: False
+cache: True
+cache_plugin: jsonfile
+cache_connection: /tmp/.facts
+cache_timeout: 3600

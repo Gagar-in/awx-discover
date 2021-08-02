@@ -1,5 +1,5 @@
 plugin: nmap
-address: 192.168.50.110/26
+address: 192.168.50.120/26
 strict: False
 ipv4: True
 ipv6: False
